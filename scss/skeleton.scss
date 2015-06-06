@@ -38,10 +38,10 @@ $bp-larger-than-desktophd : "min-width: 1200px" !default;
 // Colors
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
-$primary-color: #33c3f0 !default;
+$primary-color: #26c6da !default;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
-$link-color: #1eaedb !default;
+$link-color: darken($primary-color, 15%) !default;
 $font-color: #222 !default;
 
 // Typography
@@ -617,3 +617,78 @@ hr {
 
 // Larger than Desktop HD
 @media (#{$bp-larger-than-desktophd}) {}
+
+
+// Text Utilities
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// Navbar
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+nav.primary{
+  display: table;
+  margin: 0 auto;
+}
+
+nav.primary ul,
+nav.primary ul li {
+  margin: 0px;
+}
+
+nav.primary select {
+  display: none;
+  width:  100%;
+  margin: 21px 0;
+}
+
+nav.primary ul li {
+  display: inline;
+  position: relative;
+}
+
+nav.primary ul li a {
+  display: inline-block;
+  padding:  0 14px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  background: #999999;
+}
+
+nav.primary ul li a:hover {
+  background: #2ecc71;
+  cursor: pointer;
+}
+
+nav.primary ul.dropdown-menu {
+  display: none;
+  position: static;
+  float: none;
+  width: auto;
+  margin-top: 0;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+nav.primary ul.dropdown-menu {
+  clear: both;
+}
+
+nav.primary li:hover .dropdown-menu {
+	display: block;
+}

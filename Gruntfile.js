@@ -17,15 +17,29 @@ module.exports = function(grunt) {
             },
             styles: {
                 files: ['scss/**/*.scss'], // which files to watch
-                tasks: ['sass'],
+                tasks: ['sass', 'copy'],
                 options: {
                     nospawn: true
                 }
             }
+        },
+
+        copy: {
+          main: {
+            files: [
+              {
+                expand: true,
+                src: ['css/*.css'],
+                dest: '/Users/meggawatts/go/src/github.com/HenrySlawniak/fortkickass.co/static',
+                filter: 'isFile'
+              }
+            ]
+          }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['sass', 'watch']);
+    grunt.registerTask('default', ['sass', 'copy', 'watch']);
 };
