@@ -636,58 +636,55 @@ hr {
 
 // Navbar
 //––––––––––––––––––––––––––––––––––––––––––––––––––
-nav.primary {
-  height: 65px;
-//   overflow: visible;
+
+nav.navbar {
+  height: 44px;
   background-color: $primary-color;
+  top: 0;
+  border-width: 0 0 1px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
-nav.primary ul,
-nav.primary ul li {
+nav.navbar ul,
+nav.navbar ul li {
   margin: 0px;
-}
-
-nav.primary ul li {
   display: inline;
   position: relative;
 }
 
-nav.primary ul li a {
+nav.navbar ul li a {
   color: #fff;
   background-color: transparent;
   text-decoration: none;
-  padding-top: 20.5px;
-  padding-bottom: 20.5px;
-  line-height: 23px;
   position: relative;
   display: inline-block;
   padding: 10px 15px;
 }
 
-nav.primary ul li a:hover {
+nav.navbar ul li a img,
+nav.navbar ul li a i {
+  vertical-align: middle;
+}
+
+nav.navbar ul li a:hover {
   text-decoration: none;
   cursor: pointer;
+  background-color: darken($primary-color, 15%);
 }
 
-nav.primary ul.dropdown-menu li:hover {
-  color: #141414;
-  background-color: #eeeeee;
-}
-
-nav.primary ul.dropdown-menu {
-  margin: 2px 0 0;
+nav.navbar ul.dropdown-menu {
   color: #666666;
   text-decoration: none;
-  background-color: #ffffff;
+  background-color:#ffffff;
   position: absolute;
-  top: 100%;
   left: 0;
   z-index: 1000;
-  display: none;
+  display:none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
   list-style: none;
   text-align: left;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,0.175);
@@ -697,15 +694,27 @@ nav.primary ul.dropdown-menu {
   clear: both;
 }
 
-nav.primary ul.dropdown-menu li {
+nav.navbar ul.dropdown-menu li {
   display: block;
 }
-nav.primary ul.dropdown-menu li a {
+
+nav.navbar ul.dropdown-menu li:hover {
+  color: #141414;
+  background-color: #eeeeee;
+}
+
+nav.navbar ul.dropdown-menu li a {
   padding: 3px 20px;
   white-space: nowrap;
   color: #666666;
 }
 
-nav.primary li:hover .dropdown-menu {
-	display: block;
+nav.navbar ul.dropdown-menu li a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #eeeeee;
+}
+
+nav.navbar li:hover .dropdown-menu {
+  display: block;
 }
